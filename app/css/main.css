@@ -5265,11 +5265,11 @@ main {
 .viruses {
   position: relative;
   padding-bottom: 7.39vw;
-  overflow: hidden;
 }
 
 @media (max-width: 768px) {
   .viruses {
+    overflow: hidden;
     padding: 17.8744vw 7.24638vw 64.7343vw;
   }
 }

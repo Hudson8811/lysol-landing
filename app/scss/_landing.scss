@@ -350,9 +350,10 @@ main{
 .viruses{
     position: relative;
     padding-bottom: 7.39vw;
-    overflow: hidden;
+    
 
     @include for-sm{
+        overflow: hidden;
         padding:vw5(74) vw5(30) vw5(268);
     }
 

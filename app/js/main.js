@@ -31,7 +31,9 @@
   });
 
   $(document).on('click', '.l-test-input', function(e){
-    const item = $(this).data('item');
-    $('.l-test-item').removeClass('is-active');
-    $(`.l-test-item[data-item="${item}"]`).addClass('is-active');
+    setTimeout(() => {
+      const item = $(this).data('item');
+      $('.l-test-item').removeClass('is-active');
+      $(`.l-test-item[data-item="${item}"]`).addClass('is-active');
+    }, 300);
   });
