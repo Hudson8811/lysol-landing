@@ -1,0 +1,99 @@
+$blue: #16478E;
+$light-blue: #4CABE5;
+$border-blue: #B7DDF5;
+$modal-blue: #D6EEFC;
+$bg-grey: #E5E5E5;
+$bg-dark-grey: #EBEBEB;
+$bg-blue: #D6EEFC;
+$black: #000000;
+$white: #FFFFFF;
+$dark-grey: #6B818C;
+$red: #DB423B;
+
+$resolution: 1920;
+$resolution2:700;
+$resolution3:375;
+$resolution4:180;
+
+%circe-regular{
+  font-family: 'Circe-Regular';
+  font-weight: 400;
+}
+%circe-bold{
+  font-family: 'Circe-Bold';
+  font-weight: 700;
+}
+%circe-eb{
+  font-family: 'Circe-ExtraBold';
+  font-weight: 800;
+}
+
+@function vw($px) {
+  @return (($px/$resolution) * 100)  + vw;
+}
+// @function vw-con($px) {
+//   @return (($px/$resolution) * 100)  + vw;
+// }
+@function vw2($px) {
+  @return (($px/$resolution2) * 100) + vw;
+}
+@function vw3($px) {
+  @return (($px/$resolution3) * 100) + vw;
+}
+@function vh4($px) {
+  @return (($px/$resolution4) * 100) * 0.5 + vh;
+}
+// @function vw2($px) {
+  
+//   @return (($px/$resolution2) * 100) * 0.7 + vw;
+// }
+
+
+
+
+
+// @mixin for-xxl {
+//   @media (max-width: 1805px) { @content; }
+// }
+// @mixin for-xl {
+//     @media (min-width: 1024px) and (max-width: 1470px) { @content; }
+//   }
+
+@mixin for-lg {
+    @media (max-width: 1200px) { @content; }
+  }
+//   @mixin for-lit-desktop {
+//     @media (max-width: 1050px) { @content; }
+//   }
+//   @mixin for-md-desktop{
+//     @media (min-width: 1025px) { @content; }
+//   }
+  @mixin for-md {
+    @media (max-width: 1023px) { @content; }
+    
+  }
+//   @mixin for-lit-md {
+//     @media (max-width: 850px) { @content; }
+//   }
+  @mixin for-sm {
+    @media (max-width: 768px) { @content; }
+  }
+  @mixin for-tiny-tablet {
+    @media (max-width: 650px) { @content; }
+  }
+  @mixin for-md-mob{
+    @media (max-width: 550px) { @content; }
+  }
+  @mixin for-sm-height {
+    @media (max-height: 600px) and (min-width: 1024px) { @content;}
+  }
+//   @mixin for-tiny-mob {
+//     @media (max-width: 500px) { @content; }
+//   }
+
+//   @mixin for-min-mob {
+//     @media (min-width: 650px) { @content; }
+//   }
+//   @mixin for-lit-mob {
+//     @media (max-width: 360px) { @content; }
+//     }
