@@ -14,6 +14,7 @@ $resolution: 1920;
 $resolution2:700;
 $resolution3:375;
 $resolution4:180;
+$resolution5:414;
 
 %circe-regular{
   font-family: 'Circe-Regular';
@@ -30,6 +31,9 @@ $resolution4:180;
 
 @function vw($px) {
   @return (($px/$resolution) * 100)  + vw;
+}
+@function vw5($px) {
+  @return (($px/$resolution5) * 100)  + vw;
 }
 // @function vw-con($px) {
 //   @return (($px/$resolution) * 100)  + vw;

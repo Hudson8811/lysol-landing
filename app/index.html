@@ -25,7 +25,7 @@
 
                 <h2 class="lm-screen-heading"><span>Невидимые</span> <span>соседи</span></h2>
                 <p class="lm-screen-desc">Вместе с Lysol мы расскажем все о невидимых сожителях, составим на них досье, расскажем, как они проникают в ваш дом, где в нем останавливаются и как их поскорее выселить. Оставьте свой дом только для самых родных и близких, а двери открывайте только званым гостям!</p>
-                <a href="#" class="lm-screen-next">
+                <a href=".viruses" class="lm-screen-next next">
                     <img src="images/landing/next-btn.svg" alt="">
                 </a>
             </div>
@@ -62,6 +62,7 @@
                 <div class="viruses-item" id="viruses-item-1">
                     <div class="viruses-icon"></div>
                     <div class="viruses-card">
+                        <div class="viruses-burger"></div>
                         <h3 class="viruses-card-title">Против кого бессильна обычная вода?</h3>
                         <div class="viruses-card-content">
                             <img src="images/landing/virus.svg" alt="">
@@ -88,6 +89,7 @@
                 <div class="viruses-item" id="viruses-item-2">
                     <div class="viruses-icon"></div>
                     <div class="viruses-card">
+                        <div class="viruses-burger"></div>
                         <h3 class="viruses-card-title">Против кого бессильна обычная вода?</h3>
                         <div class="viruses-card-content">
                             <img src="images/landing/virus.svg" alt="">
@@ -114,6 +116,7 @@
                 <div class="viruses-item" id="viruses-item-3">
                     <div class="viruses-icon"></div>
                     <div class="viruses-card">
+                        <div class="viruses-burger"></div>
                         <h3 class="viruses-card-title">Против кого бессильна обычная вода?</h3>
                         <div class="viruses-card-content">
                             <img src="images/landing/virus.svg" alt="">
@@ -140,6 +143,7 @@
                 <div class="viruses-item" id="viruses-item-4">
                     <div class="viruses-icon"></div>
                     <div class="viruses-card">
+                        <div class="viruses-burger"></div>
                         <h3 class="viruses-card-title">Против кого бессильна обычная вода?</h3>
                         <div class="viruses-card-content">
                             <img src="images/landing/virus.svg" alt="">
@@ -166,6 +170,7 @@
                 <div class="viruses-item" id="viruses-item-5">
                     <div class="viruses-icon"></div>
                     <div class="viruses-card">
+                        <div class="viruses-burger"></div>
                         <h3 class="viruses-card-title">Против кого бессильна обычная вода?</h3>
                         <div class="viruses-card-content">
                             <img src="images/landing/virus.svg" alt="">
@@ -192,6 +197,7 @@
                 <div class="viruses-item" id="viruses-item-6">
                     <div class="viruses-icon"></div>
                     <div class="viruses-card">
+                        <div class="viruses-burger"></div>
                         <h3 class="viruses-card-title">Против кого бессильна обычная вода?</h3>
                         <div class="viruses-card-content">
                             <img src="images/landing/virus.svg" alt="">
@@ -218,6 +224,7 @@
                 <div class="viruses-item" id="viruses-item-7">
                     <div class="viruses-icon"></div>
                     <div class="viruses-card">
+                        <div class="viruses-burger"></div>
                         <h3 class="viruses-card-title">Против кого бессильна обычная вода?</h3>
                         <div class="viruses-card-content">
                             <img src="images/landing/virus.svg" alt="">
@@ -244,6 +251,7 @@
                 <div class="viruses-item" id="viruses-item-8">
                     <div class="viruses-icon"></div>
                     <div class="viruses-card">
+                        <div class="viruses-burger"></div>
                         <h3 class="viruses-card-title">Против кого бессильна обычная вода?</h3>
                         <div class="viruses-card-content">
                             <img src="images/landing/virus.svg" alt="">
@@ -270,6 +278,7 @@
                 <div class="viruses-item" id="viruses-item-9">
                     <div class="viruses-icon"></div>
                     <div class="viruses-card">
+                        <div class="viruses-burger"></div>
                         <h3 class="viruses-card-title">Против кого бессильна обычная вода?</h3>
                         <div class="viruses-card-content">
                             <img src="images/landing/virus.svg" alt="">
@@ -296,6 +305,7 @@
                 <div class="viruses-item" id="viruses-item-10">
                     <div class="viruses-icon"></div>
                     <div class="viruses-card">
+                        <div class="viruses-burger"></div>
                         <h3 class="viruses-card-title">Против кого бессильна обычная вода?</h3>
                         <div class="viruses-card-content">
                             <img src="images/landing/virus.svg" alt="">
@@ -325,20 +335,87 @@
             <h2 class="l-test-title">Сканер вирусов <br> и бактерий</h2>
             <p class="l-test-desc">«Просканируйте» свой быт, отвечая на наши вопросы, и мы попробуем угадать, сколько непрошеных «соседей» живет у вас дома!</p>
             <div class="l-test-content">
-                <div class="l-test-item" id="l-test-item-1">
-                    <div class="l-test-heading">1. Как вы можете оценить бытовые привычки своей семьи в целом?</div>
+                <div class="l-test-item is-active" data-item="1" id="l-test-item-1">
+                    <div class="l-test-heading"> <b>1.</b> Как вы можете оценить бытовые привычки своей семьи в целом?</div>
                     <div class="l-test-q">
-                        <div class="l-test-input">
+                        <label class="l-test-input" data-item="2">
                             <input type="radio" name="q" id="1">
                             <b></b>
-                        </div>
+                        </label>
                         <p class="l-test-text">Мы любим чистоту и порядок</p>
+                    </div>
+                    <div class="l-test-q">
+                        <label class="l-test-input" data-item="2">
+                            <input type="radio" name="q" id="2">
+                            <b></b>
+                        </label>
+                        <p class="l-test-text">Убираемся, но без фанатизма </p>
+                    </div>
+                    <div class="l-test-q">
+                        <label class="l-test-input" data-item="2">
+                            <input type="radio" name="q" id="3">
+                            <b></b>
+                        </label>
+                        <p class="l-test-text">На уборку часто не хватает <br> времени или сил</p>
+                    </div>
+                </div>
+
+                <div class="l-test-item" data-item="2" id="l-test-item-2">
+                    <div class="l-test-heading"> <b>2.</b> Как вы можете оценить бытовые привычки своей семьи в целом?</div>
+                    <div class="l-test-q">
+                        <label class="l-test-input" data-item="3">
+                            <input type="radio" name="q" id="1">
+                            <b></b>
+                        </label>
+                        <p class="l-test-text">Мы любим чистоту и порядок</p>
+                    </div>
+                    <div class="l-test-q">
+                        <label class="l-test-input" data-item="3">
+                            <input type="radio" name="q" id="2">
+                            <b></b>
+                        </label>
+                        <p class="l-test-text">Убираемся, но без фанатизма </p>
+                    </div>
+                    <div class="l-test-q">
+                        <label class="l-test-input" data-item="3">
+                            <input type="radio" name="q" id="3">
+                            <b></b>
+                        </label>
+                        <p class="l-test-text">На уборку часто не хватает <br> времени или сил</p>
+                    </div>
+                </div>
+
+                <div class="l-test-item" data-item="3" id="l-test-item-3">
+                    <div class="l-test-heading"> <b>3.</b> Как вы можете оценить бытовые привычки своей семьи в целом?</div>
+                    <div class="l-test-q">
+                        <label class="l-test-input" data-item="3">
+                            <input type="radio" name="q" id="1">
+                            <b></b>
+                        </label>
+                        <p class="l-test-text">Мы любим чистоту и порядок</p>
+                    </div>
+                    <div class="l-test-q">
+                        <label class="l-test-input" data-item="3">
+                            <input type="radio" name="q" id="2">
+                            <b></b>
+                        </label>
+                        <p class="l-test-text">Убираемся, но без фанатизма </p>
+                    </div>
+                    <div class="l-test-q">
+                        <label class="l-test-input" data-item="3">
+                            <input type="radio" name="q" id="3">
+                            <b></b>
+                        </label>
+                        <p class="l-test-text">На уборку часто не хватает <br> времени или сил</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <footer class="l-footer">
+        <p class="l-footer-desclamer">© 2021 HSM Production</p>
+    </footer>
 
 
 
