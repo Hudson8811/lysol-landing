@@ -877,10 +877,12 @@ main{
         display: block;
         max-width: 52.65vw;
         margin: 0 auto;
+        height: vw(440);
 
         @include for-sm{
             max-width: none;
             width: 100%;
+            height: vw5(440);
         }
     }
 
@@ -937,10 +939,50 @@ main{
     }
 
     &-item{
+        display: block;
+    }
+
+    &-resault{
         display: none;
 
-        &.is-active{
+        &-title{
             display: block;
+            margin-bottom: vw(20);
+            font-size: vw(40);
+            line-height: vw(45);
+            color: #16478E;
+
+            @include for-sm{
+                margin-bottom: vw5(20);
+                font-size: vw5(40);
+                line-height: vw5(45);
+            }
+        }
+
+        &-desc{
+            display: block;
+            margin-bottom: vw(20);
+            font-size: vw(20);
+            line-height: vw(23);
+            color: #16478E;
+
+            @include for-sm{
+                margin-bottom: vw5(20);
+                font-size: vw5(20);
+                line-height: vw5(23);
+            }
+        }
+
+        &-ps{
+            display: block;
+            font-size: vw(20);
+            line-height: vw(23);
+            color: #16478E;
+
+            @include for-sm{
+                font-size: vw5(20);
+                line-height: vw5(23);
+            }
         }
     }
 
@@ -961,25 +1003,25 @@ main{
 
         input{
             display: none;
+        }
 
-            &:checked{
-                & + b{
-                    &:before{
-                        content: '';
-                        position: absolute;
-                        left: 50%;
-                        top: 50%;
-                        display: block;
-                        width: vw(30);
-                        height: vw(30);
-                        border-radius: 50%;
-                        transform: translate(-50%, -50%);
-                        background: #9F895B;
+        &.is-active{
+            b{
+                &:before{
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    display: block;
+                    width: vw(30);
+                    height: vw(30);
+                    border-radius: 50%;
+                    transform: translate(-50%, -50%);
+                    background: #9F895B;
 
-                        @include for-sm{
-                            height: vw5(30);
-                            width: vw5(30);
-                        }
+                    @include for-sm{
+                        height: vw5(30);
+                        width: vw5(30);
                     }
                 }
             }

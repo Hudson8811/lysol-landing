@@ -30,10 +30,68 @@
     return false;
   });
 
-  $(document).on('click', '.l-test-input', function(e){
-    setTimeout(() => {
-      const item = $(this).data('item');
-      $('.l-test-item').removeClass('is-active');
-      $(`.l-test-item[data-item="${item}"]`).addClass('is-active');
-    }, 300);
+
+  $(document).ready(function() {
+    var total = 0;
+    currentQuestion = 0;
+    countQuestions = 1;
+
+    $.getJSON('test.json', function(data) {
+      quests = data;
+      countQuestions = quests.test.length;
+      $('.test__counter-total').html(countQuestions);
+      currentQuestion ++;
+      setQuest(currentQuestion,quests);
+    });
+
+    function setQuest(currentQuestion,quests){
+      var quest = quests.test[currentQuestion-1],
+          id = quest.id,
+          variants = quest.variants,
+          title = quest.quest
+  
+  
+      $('.l-test-heading span').html(title);
+      $('.l-test-heading b').html(id + '.');
+      $('#l-test-item-1 .l-test-input').attr('data-points',variants[0].points);
+      $('#l-test-item-2 .l-test-input').attr('data-points',variants[1].points);
+      $('#l-test-item-3 .l-test-input').attr('data-points',variants[2].points);
+      $('#l-test-item-1 .l-test-text').html(variants[0].text);
+      $('#l-test-item-2 .l-test-text').html(variants[1].text);
+      $('#l-test-item-3 .l-test-text').html(variants[2].text);
+    }
+
+    function showResults(total){
+      $.getJSON('resault.json', function(data) {
+          var results = data;
+          var tmp = 0;
+          if (total < 6) {
+              tmp = 0;
+          }  else if (total > 13) {
+              tmp = 2;
+          } else {
+              tmp = 1;
+          }
+          $('.l-test-item').hide();
+          $('.l-test-resault').show();
+          $('.l-test-resault-title').html(results.results[tmp].title);
+          $('.l-test-resault-desc').html(results.results[tmp].text);
+          $('.l-test-resault-ps').html(results.results[tmp].text2);
+      });
+    }
+
+    $('.js-game-next').on('click',function (e) {
+      e.preventDefault();
+        $(this).addClass('is-active');
+         setTimeout(() => {
+          if (currentQuestion < countQuestions){
+            $(this).removeClass('is-active');
+            currentQuestion ++;
+            setQuest(currentQuestion,quests);
+            total = total + $(this).data('points');
+          } else {
+              showResults(total);
+          }
+         }, 200);
+    });
   });

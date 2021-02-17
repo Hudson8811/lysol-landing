@@ -5855,12 +5855,14 @@ main {
   display: block;
   max-width: 52.65vw;
   margin: 0 auto;
+  height: 22.91667vw;
 }
 
 @media (max-width: 768px) {
   .l-test-content {
     max-width: none;
     width: 100%;
+    height: 106.28019vw;
   }
 }
 
@@ -5922,11 +5924,57 @@ main {
 }
 
 .l-test-item {
+  display: block;
+}
+
+.l-test-resault {
   display: none;
 }
 
-.l-test-item.is-active {
+.l-test-resault-title {
   display: block;
+  margin-bottom: 1.04167vw;
+  font-size: 2.08333vw;
+  line-height: 2.34375vw;
+  color: #16478E;
+}
+
+@media (max-width: 768px) {
+  .l-test-resault-title {
+    margin-bottom: 4.83092vw;
+    font-size: 9.66184vw;
+    line-height: 10.86957vw;
+  }
+}
+
+.l-test-resault-desc {
+  display: block;
+  margin-bottom: 1.04167vw;
+  font-size: 1.04167vw;
+  line-height: 1.19792vw;
+  color: #16478E;
+}
+
+@media (max-width: 768px) {
+  .l-test-resault-desc {
+    margin-bottom: 4.83092vw;
+    font-size: 4.83092vw;
+    line-height: 5.55556vw;
+  }
+}
+
+.l-test-resault-ps {
+  display: block;
+  font-size: 1.04167vw;
+  line-height: 1.19792vw;
+  color: #16478E;
+}
+
+@media (max-width: 768px) {
+  .l-test-resault-ps {
+    font-size: 4.83092vw;
+    line-height: 5.55556vw;
+  }
 }
 
 .l-test-input {
@@ -5951,7 +5999,7 @@ main {
   display: none;
 }
 
-.l-test-input input:checked + b:before {
+.l-test-input.is-active b:before {
   content: '';
   position: absolute;
   left: 50%;
@@ -5965,7 +6013,7 @@ main {
 }
 
 @media (max-width: 768px) {
-  .l-test-input input:checked + b:before {
+  .l-test-input.is-active b:before {
     height: 7.24638vw;
     width: 7.24638vw;
   }
