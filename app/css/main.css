@@ -5417,17 +5417,20 @@ main {
 
 .viruses-burger {
   position: absolute;
-  top: 3.86473vw;
-  right: 4.83092vw;
-  width: 3.86473vw;
-  height: 3.86473vw;
+  top: 1.5625vw;
+  right: 1.5625vw;
+  width: 2.08333vw;
+  height: 2.08333vw;
   background: center/cover url(../images/landing/burger.svg);
-  display: none;
 }
 
 @media (max-width: 768px) {
   .viruses-burger {
     display: block;
+    top: 3.86473vw;
+    right: 4.83092vw;
+    width: 3.86473vw;
+    height: 3.86473vw;
   }
 }
 

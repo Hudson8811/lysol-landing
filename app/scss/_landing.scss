@@ -485,14 +485,19 @@ main{
 
     &-burger{
         position: absolute;
-        top: vw5(16);
-        right: vw5(20);
-        width: vw5(16);
-        height: vw5(16);
+        top: vw(30);
+        right: vw(30);
+        width: vw(40);
+        height: vw(40);
         background: center / cover url(../images/landing/burger.svg);
-        display: none;
 
-        @include for-sm{display: block;}
+        @include for-sm{
+            display: block;
+            top: vw5(16);
+            right: vw5(20);
+            width: vw5(16);
+            height: vw5(16);
+        }
     }
 
     &-icon{

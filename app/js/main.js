@@ -1,3 +1,6 @@
+var wow = new WOW();
+new WOW().init();
+
   $('.viruses-icon').click(function(e){
     e.preventDefault();
     if(!$(this).hasClass('is-active')){
@@ -81,14 +84,15 @@
     }
 
     $('.js-game-next').on('click',function (e) {
+      const $this = $(this);
       e.preventDefault();
-        $(this).addClass('is-active');
+          $this.children('.l-test-input').addClass('is-active');
          setTimeout(() => {
           if (currentQuestion < countQuestions){
-            $(this).removeClass('is-active');
+            $this.children('.l-test-input').removeClass('is-active');
             currentQuestion ++;
             setQuest(currentQuestion,quests);
-            total = total + $(this).data('points');
+            total = total + $this.children('.l-test-input').data('points');
           } else {
               showResults(total);
           }
