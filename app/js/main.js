@@ -7,6 +7,7 @@ new WOW().init();
       $('.viruses-item').removeClass('is-active');
       $('.viruses-icon').removeClass('is-active');
       $('.viruses-card').hide();
+      $('.viruses-overlay').addClass('is-active');
       $(this).addClass('is-active');
       $(this).parent('.viruses-item').addClass('is-active');
       $(this).siblings('.viruses-card').show();
@@ -14,11 +15,29 @@ new WOW().init();
       $(this).parent('.viruses-item').removeClass('is-active');
       $(this).removeClass('is-active'); 
       $(this).siblings('.viruses-card').hide();
+      $('.viruses-overlay').removeClass('is-active');
     }
   });
 
   $('.viruses-burger').click(function(e){
     e.preventDefault();
+    $('.viruses-item').removeClass('is-active');
+    $('.viruses-icon').removeClass('is-active');
+    $('.viruses-card').hide();
+    $('.viruses-overlay').removeClass('is-active');
+  });
+
+  $('.viruses-overlay').click(function(e){
+    e.preventDefault();
+    $(this).removeClass('is-active');
+    $('.viruses-item').removeClass('is-active');
+    $('.viruses-icon').removeClass('is-active');
+    $('.viruses-card').hide();
+  });
+
+  $('.viruses-bg').click(function(e){
+    e.preventDefault();
+    $(this).removeClass('is-active');
     $('.viruses-item').removeClass('is-active');
     $('.viruses-icon').removeClass('is-active');
     $('.viruses-card').hide();
